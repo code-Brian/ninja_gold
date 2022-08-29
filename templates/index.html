@@ -17,7 +17,7 @@
                 <h1>Welcome to Ninja Gold</h1>
             </div>
             <div class="card-body">
-                <h2>💰{{ session['balance'] }}</p>
+                <h2>💰 {{ session['balance'] }}</p>
             </div>
 
             <div class="card-group mb-3">
@@ -29,7 +29,7 @@
                     <h5 class="card-title">Farm</h5>
                     <form class="d-flex flex-column" action="/process_money" method="post">
                         <input type="hidden" name="hidden" value="farm">
-                        <label for="submit">Earns 10-20 gold</label>
+                        <label for="submit">Earns 10-20 &#x1FA99;</label>
                         <input class="btn btn-large btn-primary mt-2" type="submit" name="submit" value="Farm">
                     </form>
                 </div>
@@ -42,7 +42,7 @@
                     <h5 class="card-title">Cave</h5>
                     <form class="d-flex flex-column" action="/process_money" method="post">
                         <input type="hidden" name="hidden" value="cave">
-                        <label for="submit">Earns 5-10 gold</label>
+                        <label for="submit">Earns 5-10 &#x1FA99;</label>
                         <input class="btn btn-large btn-primary mt-2" type="submit" name="submit" value="Spelunk">
                     </form>
                 </div>
@@ -55,7 +55,7 @@
                     <h5 class="card-title">House</h5>
                     <form class="d-flex flex-column" action="/process_money" method="post">
                         <input type="hidden" name="hidden" value="house">
-                        <label for="submit">Earns 2-5 gold</label>
+                        <label for="submit">Earns 2-5 &#x1FA99;</label>
                         <input class="btn btn-large btn-primary mt-2" type="submit" name="submit" value="Rest">
                     </form>
                 </div>
@@ -68,7 +68,7 @@
                     <h5 class="card-title">Tavern</h5>
                     <form class="d-flex flex-column" action="/process_money" method="post">
                         <input type="hidden" name="hidden" value="tavern">
-                        <label for="submit">Earn/Lose 50 Gold</label>
+                        <label for="submit">Earn/Lose 50 &#x1FA99;</label>
                         <input class="btn btn-large btn-primary mt-2" type="submit" name="submit" value="Gamble">
                     </form>
                 </div>
@@ -84,7 +84,9 @@
                     </div>
                     <div class="card-body overflow-auto">
                         <ul class="list-group list-group-flush">
-                            <li class="list-group-item">Cras justo odio</li>
+                            {% for message in session['journal'] %}
+                                {{ message|safe }}
+                            {% endfor %}
                         </ul>
                     </div>
                 </div>
