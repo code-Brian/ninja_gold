@@ -10,7 +10,7 @@ def index():
         session['balance'] = 0
     if 'journal' not in session:
         session['journal'] = []
-        session['journal'].append('<li class="list-group-item">Welcome to Ninja Gold. Vist a location to earn some gold!</li>')
+        session['journal'].append('<li class="list-group-item text-info">Welcome to Ninja Gold!</li>')
     print("here's the index file!")
     return render_template('index.html')
 
@@ -43,6 +43,11 @@ def process_money():
             session['journal'].append(message)
 
     return render_template('index.html', balance_on_template = session['balance'], journal_on_template = session['journal'])
+
+@app.route('/destroy_session')
+def destroy_session():
+    session.clear()
+    return redirect('/')
 
 if __name__ == '__main__':
     app.run(debug=True)
