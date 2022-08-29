@@ -13,4 +13,5 @@ This is the optional ninja gold assignment for coding dojo.
 ✔️ 6 NINJA Bonus: Color-code the activities text
     example: gold gained - green text, gold lost - red text
 ✔️ 7 NINJA Bonus: Add a reset button to restart the game
-❌ 8 SENSEI Bonus: Have the activities display in descending order, with the most recent activity first
+✔️ 8 SENSEI Bonus: Have the activities display in descending order, with the most recent activity first
+✔️ 9 SENSEI Bonus: Create a wind condition where the player must have 300 gold in 15 moves or less
