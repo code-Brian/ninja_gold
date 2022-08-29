@@ -12,5 +12,5 @@ This is the optional ninja gold assignment for coding dojo.
 ✔️ 5 NINJA Bonus: Display all the activities performed by the user in a log on the HTML
 ✔️ 6 NINJA Bonus: Color-code the activities text
     example: gold gained - green text, gold lost - red text
-❌ 7 NINJA Bonus: Add a reset button to restart the game
+✔️ 7 NINJA Bonus: Add a reset button to restart the game
 ❌ 8 SENSEI Bonus: Have the activities display in descending order, with the most recent activity first
